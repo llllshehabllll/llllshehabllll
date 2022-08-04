@@ -1,0 +1,56 @@
+
+
+#main {
+    width: 1500px;
+    height: 1500px;
+    background: rgb(128, 30, 30);
+    display: flex;
+}
+
+#btn:checked ~ #main {
+    transition: 2s all;
+    filter: invert(1) hue-rotate(210deg);
+    /*تحول لون الصفحة*/;
+    -webkit-transition: 2s all;
+    -moz-transition: 2s all;
+    -ms-transition: 2s all;
+    -o-transition: 2s all;
+ 
+}
+
+#btn {
+    z-index: 30;
+    width: 130px;
+    height: 50px;
+    -webkit-appearance: none;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background: rgb(135, 23, 92);
+    left: 5px;
+    top: 5px;
+    transition: .5s;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+
+input:checked[type="checkbox"]:before {
+    left: 85px;
+    background: rgb(20, 173, 190);
+}
